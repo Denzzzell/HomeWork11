@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         
         let backgroundImage = UIImage(named: "background")
         let backgroundImageView = UIImageView(image: backgroundImage)
+        
         backgroundImageView.contentMode = .scaleAspectFill
         view.addSubview(backgroundImageView)
         view.sendSubviewToBack(backgroundImageView)
@@ -115,13 +116,13 @@ class ViewController: UIViewController {
         
     }
     
-    // MARK: - Lifecycle (методы жизненного цикла ViewControllera)
-    
     // MARK: - Setup (методы для настройки иерархии View и настройки констрейнтов)
     
     func setLeftIcon(txtField: UITextField, andImage img: UIImage) {
+        
         let iconView = UIImageView(frame: CGRect(x: 30, y: 5, width: 20, height: 20))
         iconView.image = img
+        
         let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 70, height: 30))
         
         iconContainerView.addSubview(iconView)
@@ -130,16 +131,15 @@ class ViewController: UIViewController {
     }
     
     func setRightIcon(txtField: UITextField, andImage img: UIImage) {
+       
         let iconView = UIImageView(frame: CGRect(x: -10, y: 5, width: 20, height: 20))
         iconView.image = img
+        
         let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: 30))
         
         iconContainerView.addSubview(iconView)
         txtField.rightView = iconContainerView
         txtField.rightViewMode = .always
     }
-    
-    // MARK: - Actions (методы для работы с взаимодействием пользователя с интерфейсом)
-    
 }
 
