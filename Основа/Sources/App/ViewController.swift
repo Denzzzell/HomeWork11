@@ -3,16 +3,21 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Outlets (UI - элементы интерфейса - основная настройка)
+
+    @IBOutlet weak var labelLogin: UILabel!
+    @IBOutlet weak var labelOrConnectWith: UILabel!
+    @IBOutlet weak var labelDontHaveAccount: UILabel!
     
-    @IBOutlet weak var LabelLogin: UILabel!
     @IBOutlet weak var textFieldLogin: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
-    @IBOutlet weak var ButtonLoginActive: UIButton!
-    @IBOutlet weak var LabelForgotYourPassword: UILabel!
-    @IBOutlet weak var LabelOrConnectWith: UILabel!
-    @IBOutlet weak var FacebookField: UITextField!
-    @IBOutlet weak var TwitterField: UITextField!
-    @IBOutlet weak var LabelDontHaveAccount: UILabel!
+    
+    @IBOutlet weak var buttonForgotYourPassword: UIButton!
+    @IBOutlet weak var buttonLoginActive: UIButton!
+    @IBOutlet weak var buttonFacebook: UIButton!
+    @IBOutlet weak var buttonSignUp: UIButton!
+    @IBOutlet weak var buttonTwitter: UIButton!
+    
+    // MARK: - ViewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,26 +26,41 @@ class ViewController: UIViewController {
         
         let backgroundImage = UIImage(named: "background")
         let backgroundImageView = UIImageView(image: backgroundImage)
-            backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.contentMode = .scaleAspectFill
         view.addSubview(backgroundImageView)
         view.sendSubviewToBack(backgroundImageView)
         
     // MARK: LabelLogin
         
-        LabelLogin.text = "Login"
-        LabelLogin.textColor = .white
-        LabelLogin.font = .systemFont(ofSize: 27, weight: .bold)
-        LabelLogin.textAlignment = .center
-        LabelLogin.numberOfLines = 5
+        labelLogin.text = "Login"
+        labelLogin.textColor = .white
+        labelLogin.font = .systemFont(ofSize: 35, weight: .bold)
+        labelLogin.textAlignment = .center
+        labelLogin.numberOfLines = 5
+        
+    // MARK: LabelOrConnectWith
+            
+        labelOrConnectWith.text = "or connect with"
+        labelOrConnectWith.textColor = .white
+        labelOrConnectWith.font = .systemFont(ofSize: 15)
+        labelOrConnectWith.textAlignment = .center
+        labelOrConnectWith.numberOfLines = 5
+        
+    // MARK: LabelDontHaveAccount
+            
+        labelDontHaveAccount.textColor = .white
+        labelDontHaveAccount.font = .systemFont(ofSize: 15)
+        labelDontHaveAccount.textAlignment = .center
+        labelDontHaveAccount.numberOfLines = 5
         
     // MARK: textFieldLogin
         
         textFieldLogin.backgroundColor = .white
         textFieldLogin.clipsToBounds = true
-        textFieldLogin.layer.cornerRadius = 20
+        textFieldLogin.layer.cornerRadius = textFieldLogin.frame.size.height / 2
         textFieldLogin.text = "denemesis163"
         textFieldLogin.textColor = .gray
-        textFieldLogin.font = .systemFont(ofSize: 10)
+        textFieldLogin.font = .systemFont(ofSize: 13)
         
         let loginImage = UIImage(named: "login")
         setLeftIcon(txtField: textFieldLogin, andImage: loginImage!)
@@ -51,91 +71,73 @@ class ViewController: UIViewController {
         let passwordImage = UIImage(named: "password")
         setLeftIcon(txtField: textFieldPassword, andImage: passwordImage!)
         
-        
     // MARK: textFieldPassword
         
         textFieldPassword.backgroundColor = .white
         textFieldPassword.clipsToBounds = true
-        textFieldPassword.layer.cornerRadius = 20
-        textFieldPassword.text = "password"
+        textFieldPassword.layer.cornerRadius = textFieldPassword.frame.size.height / 2
+        textFieldPassword.text = "Password"
         textFieldPassword.textColor = .gray
-        textFieldPassword.font = .systemFont(ofSize: 10)
-        
+        textFieldPassword.font = .systemFont(ofSize: 13)
         
     // MARK: ButtonLoginActive
         
-        ButtonLoginActive.clipsToBounds = true
-        ButtonLoginActive.layer.cornerRadius = 20
-        ButtonLoginActive.layer.shadowColor = UIColor.black.cgColor
-        ButtonLoginActive.layer.shadowOpacity = 0.1
-        ButtonLoginActive.layer.shadowOffset = .zero
-        ButtonLoginActive.layer.shadowRadius = 20
-        ButtonLoginActive.layer.shouldRasterize = true
-        ButtonLoginActive.layer.rasterizationScale = UIScreen.main.scale
-
-    // MARK: LabelForgotYourPassword
+        buttonLoginActive.clipsToBounds = true
+        buttonLoginActive.layer.cornerRadius = buttonLoginActive.frame.size.height / 2
+        buttonLoginActive.layer.shadowColor = UIColor.black.cgColor
+        buttonLoginActive.layer.shadowOpacity = 0.1
+        buttonLoginActive.layer.shadowOffset = .zero
+        buttonLoginActive.layer.shadowRadius = 20
+        buttonLoginActive.layer.shouldRasterize = true
+        buttonLoginActive.layer.rasterizationScale = UIScreen.main.scale
         
-        LabelForgotYourPassword.text = "Forgot your password?"
-        LabelForgotYourPassword.textColor = .white
-        LabelForgotYourPassword.font = .systemFont(ofSize: 12)
-        LabelForgotYourPassword.textAlignment = .center
-        LabelForgotYourPassword.numberOfLines = 5
+    // MARK: ButtonFacebook
         
-    // MARK: LabelOrConnectWith
+        buttonFacebook.clipsToBounds = true
+        buttonFacebook.layer.cornerRadius = buttonFacebook.frame.size.height / 2
+        buttonFacebook.layer.shadowColor = UIColor.black.cgColor
+        buttonFacebook.layer.shadowOpacity = 0.1
+        buttonFacebook.layer.shadowOffset = .zero
+        buttonFacebook.layer.shadowRadius = 20
+        buttonFacebook.layer.shouldRasterize = true
+        buttonFacebook.layer.rasterizationScale = UIScreen.main.scale
         
-        LabelOrConnectWith.text = "or connect with"
-        LabelOrConnectWith.textColor = .white
-        LabelOrConnectWith.font = .systemFont(ofSize: 12)
-        LabelOrConnectWith.textAlignment = .center
-        LabelOrConnectWith.numberOfLines = 5
+    // MARK: ButtonTwitter
         
-    // MARK: FacebookField
-        
-        FacebookField.clipsToBounds = true
-        FacebookField.layer.cornerRadius = 20
-        
-        let facebookImage = UIImage(named: "facebook")
-        setLeftIcon(txtField: FacebookField, andImage: facebookImage!)
-        
-    // MARK: TwitterField
-        
-        TwitterField.clipsToBounds = true
-        TwitterField.layer.cornerRadius = 20
-        
-        let twitterImage = UIImage(named: "twitter")
-        setLeftIcon(txtField: TwitterField, andImage: twitterImage!)
-        
-    // MARK: LabelDontHaveAccount
-        
-        LabelDontHaveAccount.text = "Dont have account?   Sign up"
-        LabelDontHaveAccount.textColor = .white
-        LabelDontHaveAccount.font = .systemFont(ofSize: 12)
-        LabelDontHaveAccount.textAlignment = .center
-        LabelDontHaveAccount.numberOfLines = 5
+        buttonTwitter.clipsToBounds = true
+        buttonTwitter.layer.cornerRadius = buttonTwitter.frame.size.height / 2
+        buttonTwitter.layer.shadowColor = UIColor.black.cgColor
+        buttonTwitter.layer.shadowOpacity = 0.1
+        buttonTwitter.layer.shadowOffset = .zero
+        buttonTwitter.layer.shadowRadius = 20
+        buttonTwitter.layer.shouldRasterize = true
+        buttonTwitter.layer.rasterizationScale = UIScreen.main.scale
         
     }
     
     // MARK: - Lifecycle (методы жизненного цикла ViewControllera)
     
+    // MARK: - Setup (методы для настройки иерархии View и настройки констрейнтов)
+    
     func setLeftIcon(txtField: UITextField, andImage img: UIImage) {
-        let iconView = UIImageView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
+        let iconView = UIImageView(frame: CGRect(x: 30, y: 5, width: 20, height: 20))
         iconView.image = img
-        let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: 30))
+        let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 70, height: 30))
+        
         iconContainerView.addSubview(iconView)
         txtField.leftView = iconContainerView
         txtField.leftViewMode = .always
     }
     
     func setRightIcon(txtField: UITextField, andImage img: UIImage) {
-        let iconView = UIImageView(frame: CGRect(x: 0, y: 5, width: 20, height: 20))
+        let iconView = UIImageView(frame: CGRect(x: -10, y: 5, width: 20, height: 20))
         iconView.image = img
         let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: 30))
+        
         iconContainerView.addSubview(iconView)
         txtField.rightView = iconContainerView
         txtField.rightViewMode = .always
     }
-    
-    // MARK: - Setup (методы для настройки иерархии View и настройки констрейнтов)
     
     // MARK: - Actions (методы для работы с взаимодействием пользователя с интерфейсом)
     
