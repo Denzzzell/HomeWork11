@@ -81,7 +81,7 @@
                                     <constraint firstAttribute="height" constant="2" id="rh3-Cc-y5k"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-yW-hbw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-yW-hbw">
                                 <rect key="frame" x="50" y="726" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.64313725489999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -90,7 +90,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="facebook" imagePlacement="leading" title=" Facebook" imagePadding="10" titleAlignment="leading">
+                                <buttonConfiguration key="configuration" style="plain" image="facebook" imagePlacement="leading" title=" Facebook" imagePadding="3" titleAlignment="leading">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                 </buttonConfiguration>
                             </button>
@@ -100,7 +100,7 @@
                                     <constraint firstAttribute="width" constant="83" id="MVO-Y9-Hbt"/>
                                     <constraint firstAttribute="height" constant="35" id="oqJ-D5-zSh"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" red="0.024173486519999999" green="1" blue="0.96072569080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign up">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
@@ -128,7 +128,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-h1-ghv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-h1-ghv">
                                 <rect key="frame" x="230" y="726" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.41176470590000003" green="0.47058823529999999" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -137,7 +137,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="twitter" title="Twitter" imagePadding="15" titleAlignment="leading">
+                                <buttonConfiguration key="configuration" style="plain" image="twitter" title="Twitter" imagePadding="5" titleAlignment="leading">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
                             </button>
@@ -198,9 +198,6 @@
         <image name="twitter" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
