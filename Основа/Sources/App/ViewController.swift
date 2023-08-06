@@ -5,6 +5,7 @@ class ViewController: UIViewController {
     // MARK: - Outlets (UI - элементы интерфейса - основная настройка)
 
     @IBOutlet weak var labelLogin: UILabel!
+    
     @IBOutlet weak var labelOrConnectWith: UILabel!
     @IBOutlet weak var labelDontHaveAccount: UILabel!
     
