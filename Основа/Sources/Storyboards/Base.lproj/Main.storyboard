@@ -174,9 +174,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ButtonLoginActive" destination="5vH-Sq-ETR" id="zxF-5r-kMH"/>
                         <outlet property="LabelDontHaveAccount" destination="GHc-Q9-faq" id="8Pg-Q2-B1j"/>
-                        <outlet property="LabelLogin" destination="fjJ-RV-bEr" id="rrU-It-VID"/>
                         <outlet property="LabelOrConnectWith" destination="4w4-yQ-IKg" id="eEB-KS-bkY"/>
                         <outlet property="buttonFacebook" destination="uJT-yW-hbw" id="CHg-Qd-iR6"/>
                         <outlet property="buttonForgotYourPassword" destination="C99-g5-XuS" id="167-3a-rU9"/>
